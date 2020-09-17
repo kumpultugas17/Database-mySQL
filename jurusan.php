@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('localhost', 'root', '', 'db-mahasiswa');
+include 'config/koneksi.php';
 $result = mysqli_query($conn, "SELECT * FROM jurusan");
 ?>
 
@@ -11,6 +11,9 @@ $result = mysqli_query($conn, "SELECT * FROM jurusan");
     <title>Document</title>
 </head>
 <body>
+    <h3>Data Jurusan</h3>
+    <a href="add-jurusan.php">Add Data</a>
+    <br><br>
     <table border="1" cellpadding="7" cellspacing="0">
         <tr>
             <td>ID</td>

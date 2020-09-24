@@ -12,25 +12,31 @@ $result = mysqli_query($conn, "SELECT * FROM mahasiswa");
 </head>
 <body>
     <h3>Data Mahasiswa</h3>
-    <a href="#">Add Data</a>
+    <a href="add-mahasiswa.php">Add Data</a>
     <br><br>
     <table border="1" cellpadding="7" cellspacing="0">
         <tr>
-            <td>ID</td>
-            <td>NIM</td>
-            <td>Nama</td>
-            <td>Jenis Kelamin</td>
-            <td>Jurusan</td>
-            <td>Alamat</td>
-            <td>No Telepon</td>
-            <td>E-mail</td>
+            <th>ID</th>
+            <th>NIM</th>
+            <th>Nama</th>
+            <th>Jenis Kelamin</th>
+            <th>Jurusan</th>
+            <th>Alamat</th>
+            <th>No Telepon</th>
+            <th>E-mail</th>
+            <th>Aksi</th>
         </tr>
         <?php foreach ($result as $row): ?>
         <tr>
             <td><?php echo $row['id']; ?></td>
             <td><?php echo $row['nim']; ?></td>
             <td><?php echo $row['nama']; ?></td>
-            <td><?php echo $row['jk']; ?></td>
+            <td><?php if ($row['jk'] == 'l') {
+                        echo "Laki-laki";
+                    } else {
+                        echo "Perempuan";
+                    } ?>
+            </td>
             <td><?php echo $row['jurusan_id']; ?></td>
             <td><?php echo $row['alamat']; ?></td>
             <td><?php echo $row['no_telp']; ?></td>

@@ -14,9 +14,9 @@ $result = mysqli_query($conn, "SELECT * FROM jurusan");
     <h3>Tambah Data Mahasiswa</h3>
     <form action="" method="POST">
         <label for="nim">NIM</label>
-        <input type="text" id="nim" name="nim"><br>
+        <input type="text" id="nim" name="nim" required><br>
         <label for="nama">Nama Lengkap</label>
-        <input type="text" id="nama" name="nama"><br>
+        <input type="text" id="nama" name="nama" required><br>
         <label for="jk">Jenis Kelamin</label>
         <select name="jenis_kelamin" id="jk">
             <option value="l">Laki-laki</option>
@@ -31,9 +31,9 @@ $result = mysqli_query($conn, "SELECT * FROM jurusan");
         <label for="alamat">Alamat</label>
         <textarea rows="3" cols="30" name="alamat" id="alamat"></textarea><br>
         <label for="telp">Nomor Telepon</label>
-        <input type="text" id="telp" name="telp"><br>
+        <input type="text" id="telp" name="telp" required><br>
         <label for="email">E-Mail</label>
-        <input type="email" id="email" name="email">
+        <input type="email" id="email" name="email" required>
         <br><br><button type="submit" name="submit">Simpan</button>
     </form>
 </body>
@@ -55,6 +55,7 @@ if (isset($_POST['submit'])) {
 
     if ($query) {
         echo "Data berhasil disimpan!";
+        header('Location: mahasiswa.php');
     } else {
         echo "Data gagal disimpan!";
     }

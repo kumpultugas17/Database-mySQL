@@ -48,7 +48,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="tambah-pendaftaran.php" class="nav-link">
+                <a href="form-pendaftaran.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah Data</p>
                 </a>

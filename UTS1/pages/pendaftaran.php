@@ -67,7 +67,7 @@ $data = mysqli_query($koneksi, $result);
                                     <td>
                                        <button class="btn btn-xs btn-info">Detail</button>
                                        <button class="btn btn-xs btn-warning">Edit</button>
-                                       <button class="btn btn-xs btn-danger">Hapus</button>
+                                       <button class="btn btn-xs btn-danger" onclick="confirm('Yakin data akan dihapus ?')">Hapus</button>
                                     </td>
                                  </tr>
                               <?php endforeach ?>
